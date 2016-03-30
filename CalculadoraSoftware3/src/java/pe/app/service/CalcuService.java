@@ -10,21 +10,30 @@ package pe.app.service;
  * @author mud
  */
 public class CalcuService {
-    
-    public double calcularSuma(int n1,int n2)
+        
+    public double calcularOperacion(int n1,int n2, int operacion)
     {
-        return n1+n2;
-    }
-    public double calcularResta(int n1,int n2)
-    {
-        return n1-n2;
-    }
-    public double calcularMultiplicacion(int n1,int n2)
-    {
-        return n1*n2;
-    }public double calcularDivision(int n1,int n2)
-    {
-        return n1/n2;
+        double resultado = 0;
+        /*
+        1: Suma
+        2: Resta
+        3: Multiplicacion
+        4: Division
+        */
+        switch(operacion)
+        {
+            case 1 : resultado = n1+n2;
+            break;
+            case 2 : resultado = n1-n2;
+            break;
+            case 3 : resultado = n1*n2;
+            break;
+            case 4 : resultado = n1/n2;
+            break;
+        }
+         
+        return resultado;
+        
     }
     
 }

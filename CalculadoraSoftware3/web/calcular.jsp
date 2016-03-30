@@ -10,12 +10,14 @@
     
     int n1,n2;
     double resultado;
+    int operacion;
     
     n1 = Integer.parseInt(request.getParameter("n1"));
     n2 = Integer.parseInt(request.getParameter("n2"));
+    operacion = Integer.parseInt(request.getParameter("operacion"));
     
     CalcuService calculadora = new CalcuService();
-    resultado = calculadora.calcularSuma(n1, n2);
+    resultado = calculadora.calcularOperacion(n1, n2, operacion);
 
 %>
 
