@@ -8,9 +8,9 @@
 
 <%
     
-    int n1,n2;
+    int n1,n2,operacion;
     double resultado;
-    int operacion;
+    String nombreOperacion,signoOperacion;
     
     n1 = Integer.parseInt(request.getParameter("n1"));
     n2 = Integer.parseInt(request.getParameter("n2"));
@@ -18,6 +18,8 @@
     
     CalcuService calculadora = new CalcuService();
     resultado = calculadora.calcularOperacion(n1, n2, operacion);
+    nombreOperacion = calculadora.nombreOperacion(operacion,1);
+    signoOperacion = calculadora.nombreOperacion(operacion,2);
 
 %>
 
@@ -35,8 +37,7 @@
     </style>
     <body>
         <h1>Calculadora</h1>
-        <h2>Operacion Suma</h2>
-        <p><%=n1%> + <%=n2%></p>
-        <p>Respuesta : <%=resultado%></p>
+        <h2>Operacion <%=nombreOperacion%></h2>
+        <p><%=n1%> <%=signoOperacion%> <%=n2%> = <b><%=resultado%></b></p>
     </body>
 </html>

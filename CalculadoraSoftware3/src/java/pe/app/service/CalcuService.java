@@ -36,4 +36,40 @@ public class CalcuService {
         
     }
     
+    public String nombreOperacion(int operacion, int i)
+    {
+        String s = "";
+        
+        if(i==1)
+        {
+            switch(operacion)
+            {
+                case 1 : s = "Suma";
+                break;
+                case 2 : s = "Resta";
+                break;
+                case 3 : s = "Multiplicación";
+                break;
+                case 4 : s = "División";
+                break;
+            }
+        }else if(i==2)
+        {
+            switch(operacion)
+            {
+                case 1 : s = "+";
+                break;
+                case 2 : s = "-";
+                break;
+                case 3 : s = "*";
+                break;
+                case 4 : s = "/";
+                break;
+            }
+        }
+        
+        return s;
+         
+    }
+    
 }
